@@ -1,0 +1,442 @@
+body {
+    background-color: black;
+    overflow-x: hidden;
+    margin: auto;
+}
+
+
+* {
+    color: white;
+}
+
+/*Mine transperante baggrunde til de forskellige section.*/
+
+.stegSelvMenu__background {
+    background-image: url(images/stegSelvMenuBackground.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.tider__background {
+    background-image: url(images/tiderBackground.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.footer__background {
+    background-image: url(images/footerBackground.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/*alt inde for min navigations bar og logo*/
+.headBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgb(45, 41, 41);
+    align-items: center;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.headBar__logo {
+    height: 100px;
+    justify-self: flex-start;
+    margin-left: 10px;
+}
+
+.navBar__items {
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    list-style: none;
+    margin-right: 80px;
+    font-family: "Istok Web", sans-serif;
+}
+
+.navBar__item:hover {
+    text-decoration: underline 5px;
+    text-underline-offset: 10px;
+    animation: 1s ease-in itemSelect;
+    animation-fill-mode: forwards;
+}
+
+@keyframes itemSelect {
+    from {
+        color: white;
+    }
+    to {
+        transform: scale(1.2);
+        color: red;
+    }
+}
+
+a {
+    text-decoration: none;
+    font-size: 20px;
+}
+
+/* Her laver jeg lidt styling og placering af titlen på siden*/
+
+.head__title {
+    display: flex;
+    justify-content: center;
+    margin-top: 120px;
+    margin-bottom: 120px;
+    font-family: "Istok Web", sans-serif;
+}
+
+h1 {
+    font-size: 40px;
+    font-family: "Inknut Antiqua", serif;
+}
+
+
+/* Her begynder jeg på min første info tekst*/
+
+.infoBox {
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(45, 41, 41);
+    margin-right: 40px;
+    margin-left: 40px;
+    padding-left: 20px;
+    margin-bottom: 60px;
+}
+
+.infoBox__text{
+   font-size: 20px;
+   font-family: "Istok Web", sans-serif;
+}
+
+.infoBox__picture {
+    width: 50%;
+}
+
+
+/* her begynder jeg på mine produkt kort*/
+
+.head__title--product {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 40px;
+    font-family: "Inknut Antiqua", serif;
+    
+}
+
+
+.productCards {
+    display: grid;
+    gap: 8rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    margin-left: 0.9rem;
+}
+
+
+.productCard {
+    background-color: rgb(45, 41, 41);
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+}
+
+.productCard:hover {
+    animation: 1.5s ease-in productCard__Hover;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes productCard__Hover {
+
+    20% {
+        transform: rotate(180deg);
+    }
+
+    50% {
+        transform: translate(1000px);
+    }
+
+    60% {
+        transform: rotateX(360deg);
+    }
+
+    80% {
+        transform: rotateX(0deg);
+    }
+
+    100% {
+        box-shadow: 0 0 100px white;
+        transform: translateY(-20px);
+    }
+}
+
+.productCard__text {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    font-size: 20px;
+    flex-grow: 1;
+    font-family: "Istok Web", sans-serif;
+}
+
+.productCard__text--header {
+    font-size: 30px;
+    font-family: "Istok Web", sans-serif;
+}
+
+/* jeg havde lidt problemer med at få mine prices til at være den rigtige størrelse, jeg kunne ikke få "flex-grow" til at virke*/
+.productCard__price {
+    background-color: rgb(200,248,7);
+    align-self: center;
+    border-radius: 20px;
+    padding: 10px;
+    color: black;
+}
+
+
+.productCard__text--info {
+    flex-grow: 1;
+}
+
+
+/* Her laver jeg på selve steg menu kortet*/
+
+.head__title--stegSelv {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 40px;
+    font-family: "Inknut Antiqua", serif;
+}
+
+
+.productCard__stegSelv {
+    display: flex;
+    flex-direction: row;
+  
+}
+
+.productCard__stegSelv--text {
+    display: flex;
+   flex-direction: column;
+   font-size: 20px;
+   background-color: rgb(45, 41, 41);
+   padding: 20px;
+   font-family: "Istok Web", sans-serif;
+   flex-wrap: wrap;
+   max-width: 40rem;
+   justify-content: center;
+}
+
+.productCard__stegSelv--pictures {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+
+.productCard__stegSelv--title {
+    font-size: 30px;
+    font-family: "Istok Web", sans-serif;
+}
+
+/* her er css'en for åbeningstider*/
+
+.tider__skema {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-size: 20px;
+    padding-bottom: 20px;
+    font-family: "Istok Web", sans-serif;
+}
+
+
+h5 {
+    font-size: 40px;
+    margin-bottom: 40px;
+    font-family: "Istok Web", sans-serif;
+}
+
+/* her laver jeg min footer med kontakt info og de ting Slagter hansen ellers gerne ville have i sin footer*/
+
+footer {
+    display: flex;
+    flex-direction: column;
+    margin-left: 60px;
+    font-size: 20px;
+    font-family: "Istok Web", sans-serif;
+    padding-top: 60px;
+}
+
+.footer__copyright {
+    display: flex;
+    justify-content: center;
+    margin-right: 40px;
+    font-family: "Istok Web", sans-serif;
+}
+
+.footer__text {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.footer__background--pig {
+    width: 20%;
+    margin-right: 100px;
+    animation: 3s linear infinite pig__roll;
+}
+
+@keyframes pig__roll {
+    from {
+        transform: rotateX(0deg);
+    }
+    to {
+        transform: rotateX(359deg);
+    }
+}
+
+
+@media (max-width: 391px) {
+
+    .headBar__logo {
+        height: 2rem;
+        justify-self: flex-start;
+        margin-left: 0.7rem;
+    }
+
+    .navBar__items {
+        display: flex;
+        flex-direction: row;
+        gap: 0.8rem;
+        list-style: none;
+        padding-right: 2rem;
+        font-family: "Istok Web", sans-serif;
+    }
+
+    .navBar__item--anchor {
+        font-size: 0.5rem;
+    }
+
+    
+
+    h1 {
+        font-size: 1rem;
+        padding-right: 8rem;
+        padding-left: 3rem;
+        text-align: center;
+    }
+
+
+    .head__title {
+        display: flex;
+        justify-content: center;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+        font-family: "Istok Web", sans-serif;
+    }
+
+
+
+
+    .infoBox {
+        display: flex;
+        flex-direction: row;
+        background-color: rgb(45, 41, 41);
+        margin-right: 9rem;
+        margin-left: 3rem;
+        margin-bottom: 6rem;
+        
+    }
+
+    .infoBox__text{
+        font-size: 0.5rem;
+        font-family: "Istok Web", sans-serif;
+        padding-right: 0.2rem;
+     }
+
+     h3 {
+        font-size: 1rem;
+        padding-right: 6rem;
+     }
+
+
+     .productCard {
+        background-color: rgb(45, 41, 41);
+        display: flex;
+        flex-direction: column;
+        width: 16rem;
+    }
+    
+
+     .productCard__text {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        font-size: 0.6rem;
+        flex-grow: 1;
+        font-family: "Istok Web", sans-serif;
+    }
+
+    .productCard__text--header {
+        font-size: 1rem;
+    }
+
+
+    h4 {
+        font-size: 1rem;
+        padding-right: 6rem;
+     }
+
+    .productCard__stegSelv--title {
+        font-size: 1rem;
+    }
+
+
+    .productCard__stegSelv--text {
+        display: flex;
+       flex-direction: column;
+       font-size: 0.7rem;
+       background-color: rgb(45, 41, 41);
+       padding: 20px;
+       font-family: "Istok Web", sans-serif;
+       flex-wrap: wrap;
+       justify-content: center;
+    }
+
+   .productCard__stegSelv--picture {
+    width: 6rem;
+}
+
+h5 {
+    font-size: 1.5rem;
+}
+
+.tider__skema {
+    font-size: 1rem;
+    justify-self: flex-start;
+    padding-left: 4.5rem;
+}
+
+
+footer {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+    font-size: 0.7rem;
+    font-family: "Istok Web", sans-serif;
+    padding-top: 3rem;
+}
+
+.footer__copyright {
+    margin-right: 8rem;
+}
+
+.footer__background--pig {
+    width: 5rem;
+    margin-right: 8rem;
+}
+
+}
