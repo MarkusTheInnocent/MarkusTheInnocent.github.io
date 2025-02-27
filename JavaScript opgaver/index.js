@@ -25,11 +25,11 @@ function tilbageKnap1() {
    if(imageIndex > 0) { 
     imageIndex = imageIndex - 1
     imageConSort.src = billederSort[imageIndex]
-}
+    }
 }
 
 function fremKnap1() {
-    if(imageIndex <2){
+    if(imageIndex < 2){
         imageIndex = imageIndex + 1
     imageConSort.src = billederSort[imageIndex]
     }
@@ -40,7 +40,11 @@ let hvidFarve = document.querySelector('#white');
 let sortFarve = document.querySelector('#black');
 
 function whiteKnap() {
+    imageConSort.src = null
+}
 
+function blackKnap() {
+    imageConHvid.src = null
 }
 
 
