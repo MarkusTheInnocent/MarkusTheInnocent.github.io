@@ -1,5 +1,49 @@
 
 
+let billederSort = [
+    "Images/black-front.png",
+    "Images/black-back.png",
+    "Images/black-slide.png",
+]
+let billederHvid = [
+    "Images/white-front.png",
+    "Images/white-back.png",
+    "Images/white-slide.png",
+]
+
+let imageIndex = 0;
+
+let imageConSort = document.querySelector('.sortTshirt img');
+let imageConHvid = document.querySelector('.hvidTshirt img');
+
+let fremKnapV = document.querySelector('#fremKnap');
+let tilbageKnapV = document.querySelector('#tilbageKnap');
+
+
+
+function tilbageKnap1() {
+   if(imageIndex > 0) { 
+    imageIndex = imageIndex - 1
+    imageConSort.src = billederSort[imageIndex]
+}
+}
+
+function fremKnap1() {
+    if(imageIndex <2){
+        imageIndex = imageIndex + 1
+    imageConSort.src = billederSort[imageIndex]
+    }
+}
+
+
+let hvidFarve = document.querySelector('#white');
+let sortFarve = document.querySelector('#black');
+
+function whiteKnap() {
+
+}
+
+
 
 let produkt1AntalV = document.querySelector('#produkt1Antal');
 
@@ -50,43 +94,3 @@ let produkt1PrisV = document.querySelector('#produkt1Pris');
 
 
 
-
-
-
-/*
-function addVare1() {
-    produkt1Antal = produkt1Antal + 1
-    produkt1Pris = produkt1Pris + 8
-    document.getElementById("produkt1Antal").innerText = produkt1Antal
-    document.getElementById("produkt1Pris").innerText = produkt1Pris
-}
-
-function tagVare1() {
-    produkt1Antal = produkt1Antal - 1 
-    produkt1Pris = produkt1Pris - 8
-    if (produkt1Pris < 0) {
-        return produkt1Pris = 8;
-    }
-    if (produkt1Antal < 30) {
-        return produkt1Antal = 29;
-    }
-    document.getElementById("produkt1Antal").innerText = produkt1Antal
-    document.getElementById("produkt1Pris").innerText = produkt1Pris
-}
-
-
-function addVare2() {
-    produkt2Antal = produkt2Antal + 1
-    produkt2Pris = produkt2Pris + 70
-    document.getElementById("produkt2Antal").innerText = produkt2Antal
-    document.getElementById("produkt2Pris").innerText = produkt2Pris
-}
-
-function tagVare2() {
-    produkt2Antal = produkt2Antal - 1
-    produkt2Pris = produkt2Pris - 70
-    document.getElementById("produkt2Antal").innerText = produkt2Antal
-    document.getElementById("produkt2Pris").innerText = produkt2Pris
-}
-*/
- 
