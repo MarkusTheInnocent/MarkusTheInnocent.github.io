@@ -1,55 +1,59 @@
 
-let produkt1 = "Bannan"
-
-console.log(produkt1)
-
-let produkt1Pris = 8
-
-console.log("Pris i kr:", produkt1Pris)
-
-let produkt1Antal = 30
-
-console.log("Antal:", produkt1Antal)
 
 
-let produkt2 = "Burger"
+let produkt1AntalV = document.querySelector('#produkt1Antal');
 
-console.log(produkt2)
+let addVare1KnapVariable = document.querySelector('#addVare1Knap');
+let tagVare1KnapVariable = document.querySelector('#tagVare1Knap');
 
-let produkt2Pris = 70
-
-console.log("Pris i kr:", produkt2Pris)
-
-let produkt2Antal = 20
-
-console.log("Antal:", produkt2Antal)
+console.log(produkt1AntalV.innerText);
 
 
+function addVare1() {
+    if(produkt1AntalV.innerText > 0 || produkt1AntalV.innerText == 0) {
+        produkt1AntalV.innerText = Number(produkt1AntalV.innerText) + 1;
+    }
 
-let samletAntal = produkt1Antal + produkt2Antal
+}
 
-console.log("Samlet Antal:",samletAntal)
+function tagVare1() {
+    if(produkt1AntalV.innerText > 0) {
+        produkt1AntalV.innerText = produkt1AntalV.innerText - 1;
+    }
 
-
-let samletPris = (produkt1Pris * produkt1Antal) + (produkt2Pris * produkt2Antal)
-
-console.log("Samlet Pris:",samletPris)
-
-
-
-
-document.getElementById("produkt1").innerText = produkt1
-document.getElementById("produkt1Pris").innerText = produkt1Pris
-document.getElementById("produkt1Antal").innerText = produkt1Antal
+}
 
 
+let produkt2AntalV = document.querySelector('#produkt2Antal');
 
-document.getElementById("produkt2").innerText = produkt2
-document.getElementById("produkt2Pris").innerText = produkt2Pris
-document.getElementById("produkt2Antal").innerText = produkt2Antal
+let addVare2KnapVariable = document.querySelector('#addVare2Knap');
+let tagVare2KnapVariable = document.querySelector('#tagVare2Knap');
+
+console.log(produkt2AntalV.innerText);
+
+
+function addVare2() {
+    if(produkt2AntalV.innerText > 0 || produkt2AntalV.innerText == 0) {
+        produkt2AntalV.innerText = Number(produkt2AntalV.innerText) + 1;
+    }
+
+}
+
+function tagVare2() {
+    if(produkt2AntalV.innerText > 0) {
+        produkt2AntalV.innerText = produkt2AntalV.innerText - 1;
+    }
+
+}
+
+let produkt1PrisV = document.querySelector('#produkt1Pris');
 
 
 
+
+
+
+/*
 function addVare1() {
     produkt1Antal = produkt1Antal + 1
     produkt1Pris = produkt1Pris + 8
@@ -84,4 +88,5 @@ function tagVare2() {
     document.getElementById("produkt2Antal").innerText = produkt2Antal
     document.getElementById("produkt2Pris").innerText = produkt2Pris
 }
-
+*/
+ 
