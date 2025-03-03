@@ -35,16 +35,33 @@ function fremKnap1() {
     }
 }
 
+let colorSort = "black"
+
 
 let hvidFarve = document.querySelector('#white');
 let sortFarve = document.querySelector('#black');
 
 function whiteKnap() {
-    imageConSort.src = null
+    color = "white"
+    showImage()
 }
 
 function blackKnap() {
-    imageConHvid.src = null
+    color = "black"
+    showImage()
+}
+
+function showImage () {
+    if (color == "black") {
+        document.querySelector('.sortTshirt img').style.display = "block"
+        document.querySelector('.hvidTshirt img').style.display = "none"
+    }
+
+    if (color == "white") {
+        document.querySelector('.hvidTshirt img').style.display = "block"
+        document.querySelector('.sortTshirt img').style.display = "none"
+    }
+
 }
 
 
