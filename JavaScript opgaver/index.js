@@ -25,6 +25,7 @@ function tilbageKnap1() {
    if(imageIndex > 0) { 
     imageIndex = imageIndex - 1
     imageConSort.src = billederSort[imageIndex]
+    imageConHvid.src = billederHvid[imageIndex]
     }
 }
 
@@ -32,14 +33,16 @@ function fremKnap1() {
     if(imageIndex < 2){
         imageIndex = imageIndex + 1
     imageConSort.src = billederSort[imageIndex]
+    imageConHvid.src = billederHvid[imageIndex]
     }
 }
-
-let colorSort = "black"
 
 
 let hvidFarve = document.querySelector('#white');
 let sortFarve = document.querySelector('#black');
+
+
+let colorSort = "black"
 
 function whiteKnap() {
     color = "white"
@@ -75,18 +78,52 @@ console.log(produkt1AntalV.innerText);
 
 
 function addVare1() {
-    if(produkt1AntalV.innerText > 0 || produkt1AntalV.innerText == 0) {
         produkt1AntalV.innerText = Number(produkt1AntalV.innerText) + 1;
-    }
+        changeMoneyPositiv()
+    
 
 }
 
 function tagVare1() {
     if(produkt1AntalV.innerText > 0) {
         produkt1AntalV.innerText = produkt1AntalV.innerText - 1;
+        changeMoneyNegativ()
     }
 
 }
+
+
+let pengeAntal = document.querySelector('#produkt1Pris')
+
+function changeMoneyPositiv() {
+    if(pengeAntal.innerText > 0 || pengeAntal.innerText == 0) {
+        pengeAntal.innerText = Number(pengeAntal.innerText) + 8;
+
+    }
+}
+
+function changeMoneyNegativ() {
+    if(pengeAntal.innerText > 0) {
+        pengeAntal.innerText = Number(pengeAntal.innerText) - 8;
+    }
+}
+
+
+
+let size = 1
+
+
+function smallKnap() {
+    size = 20
+}
+
+
+
+for (let index = 0; index < array.length; index++) {
+    const element = array[index];
+    
+}
+
 
 
 let produkt2AntalV = document.querySelector('#produkt2Antal');
