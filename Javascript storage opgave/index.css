@@ -1,0 +1,13 @@
+
+#produktCard {
+    display: flex;
+    gap: 10rem;
+    flex-wrap: wrap;
+    justify-content: center;
+ }
+ 
+ .stylecool {
+     background-color: rgb(91, 91, 233);
+     padding: 3rem;
+     
+ }
