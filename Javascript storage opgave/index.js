@@ -75,9 +75,6 @@ function winnerKnap() {
 
 
 
-
-
-
 let myTextField = document.querySelector('#myText')
 let myNameField = document.querySelector('#myName')
 
