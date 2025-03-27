@@ -60,3 +60,54 @@ async function susKnapClick() {
 }
 
 
+
+
+
+
+
+
+
+
+let listeOfPeople = document.querySelector('#testPlace')
+
+let testArray = [
+    {name:"Caesar", hobby:"Baseball"},
+    {name:"Mona", hobby:"footkic"},
+    {name:"peter", hobby:"tambo"},
+    {name:"lars", hobby:"pool"},
+]
+
+
+let testNum = 2
+
+function testFuncktion() {
+    
+    listeOfPeople.innerHTML = ""
+
+for (const abe of testArray) {
+    if(testNum == 2) {
+        listeOfPeople.innerHTML += `<li>${abe.hobby}</li>`
+    } else {
+        listeOfPeople.innerHTML += `<li>${abe.name}</li>`
+    }
+   
+
+    
+}
+
+}
+testFuncktion()
+
+let place = ["1","2"]
+
+function bigClick() {
+    
+    testNum = 1
+    testFuncktion()
+    
+}
+
+
+
+
+
