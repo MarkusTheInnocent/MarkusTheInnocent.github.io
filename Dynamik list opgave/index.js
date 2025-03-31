@@ -98,7 +98,6 @@ for (const abe of testArray) {
 }
 testFuncktion()
 
-let place = ["1","2"]
 
 function bigClick() {
     
@@ -111,3 +110,31 @@ function bigClick() {
 
 
 
+
+
+
+
+
+async function fetchTodos() {
+    let response = await fetch('https://dummyjson.com/todos?limit=10')
+    let jsonResponse = await response.json()
+
+   
+
+    //vise todos - Tilføje dem til vores liste
+
+    let list = document.querySelector('#listeDisplay')
+    
+    for (let todoItem of jsonResponse.todos) {
+        let response = await fetch('https://dummyjson.com/' + todoItem.userId)
+        let userResponse = await response.json()
+
+        if(todoItem.completed) {
+            list.innerHTML += `<li>✅ ${todoItem.todo} - UserID: ${userResponse.firstName}</li>`
+        } else {
+            list.innerHTML += `<li>❌ ${todoItem.todo}- UserID: ${userResponse.firstName}</li>`
+        }
+    }
+}
+
+fetchTodos()
