@@ -1,0 +1,12 @@
+.styleTime{
+    background-color: rgb(91, 91, 233);
+    padding: 3rem;
+}
+
+#orderUp {
+    display: flex;
+    gap: 10rem;
+    flex-wrap: wrap;
+    justify-content: center;
+   
+}
