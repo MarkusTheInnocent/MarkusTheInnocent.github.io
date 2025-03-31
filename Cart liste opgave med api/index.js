@@ -47,10 +47,14 @@ async function detail(productID) {
     myList += `<p>Discount: ${jsonResponse.discountPercentage}%</p>`
     myList += `<p>Rating: ${jsonResponse.rating} ⭐</p>`
     myList += `<p>Antal: ${jsonResponse.stock}</p>`
+    myList += `<p>Tags: ${jsonResponse.tags}</p>`
+    myList += `<p>Dimensioner: Width:${jsonResponse.dimensions.width} Height: ${jsonResponse.dimensions.height} Depth: ${jsonResponse.dimensions.depth}</p>`
+    myList += `<img src=${jsonResponse.images}</img>`
     myList += `</section>`
-
+    
 
     list.innerHTML = myList
+
 
 }
 
