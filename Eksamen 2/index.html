@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div>
+        <label for="monthSelect">Select Month:</label>
+        <select id="monthSelect" v-model="selectedMonth">
+          <option value="0">All</option>
+          <option value="1">Januar</option>
+          <option value="2">Februar</option>
+          <option value="3">Marts</option>
+          <option value="3">April</option>
+           <option value="3">Maj</option>
+        </select>
+        <ul>
+          <li v-for="post in filteredPosts" :key="post.id">{{ post.title }}</li>
+        </ul>
+      </div>
+    
+    <script>
+        
+        Vue.filter('filterByMonth', function(posts, selectedMonth) {
+      if (selectedMonth === 0) {
+        return posts; // Return all
+      }
+      return posts.filter(post => {
+        const postDate = new Date(post.date);
+        const postMonth = postDate.getMonth() + 1; // Months are indexed from 0
+        return postMonth === selectedMonth;
+      });
+    });
+        
+        
+        export default {
+      data() {
+        return {
+          selectedMonth: 0, // Default to All
+          posts: []
+        };
+      },
+      computed: {
+        filteredPosts() {
+          return this.$options.filters.filterByMonth(this.posts, this.selectedMonth);
+        }
+      }
+    };
+        
+    </script>
+    
+
+    <script src="index.js"></script>
+</body>
+</html>
